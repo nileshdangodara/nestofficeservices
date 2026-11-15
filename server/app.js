@@ -9,7 +9,7 @@ import { contactLimiter, globalLimiter } from "./middleware/rateLimiter.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 
 const app = express();
-
+app.set("trust proxy", 1);
 // Connect to MongoDB
 connectDB();
 
