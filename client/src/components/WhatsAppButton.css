@@ -1,0 +1,154 @@
+/* ============================================================
+   Floating Contact Action Buttons (Call & WhatsApp)
+   Fixed on the bottom-right of the viewport with smooth hover effects
+   ============================================================ */
+
+.floating-actions-wrap {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  pointer-events: auto;
+}
+
+/* Base Floating Action Button */
+.floating-action-btn {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              box-shadow 0.25s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.floating-action-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+}
+
+.floating-action-btn:active {
+  transform: scale(0.95);
+}
+
+/* Call Button (NestOffice Brand Orange) */
+.floating-call-btn {
+  background-color: var(--accent-blue, #E85122);
+  box-shadow: 0 8px 22px rgba(232, 81, 34, 0.38), 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.floating-call-btn:hover {
+  background-color: #d44315;
+  box-shadow: 0 12px 28px rgba(232, 81, 34, 0.48), 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.floating-call-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #E85122;
+}
+
+/* WhatsApp Button (WhatsApp Green) */
+.floating-whatsapp-btn {
+  background-color: #25d366;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.38), 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.floating-whatsapp-btn:hover {
+  background-color: #20ba5a;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.48), 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.floating-whatsapp-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #25d366;
+}
+
+/* Icons */
+.floating-action-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.floating-action-icon--wa {
+  width: 28px;
+  height: 28px;
+}
+
+/* Desktop Hover Tooltip (Left Side of Button) */
+.floating-action-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  background: #09090b;
+  color: #ffffff;
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.floating-action-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #09090b;
+}
+
+.floating-action-btn:hover .floating-action-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Responsive adjustments for Mobile & Small Tablets */
+@media (max-width: 640px) {
+  .floating-actions-wrap {
+    bottom: 18px;
+    right: 18px;
+    gap: 10px;
+  }
+
+  .floating-action-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-action-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .floating-action-icon--wa {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Hide hover tooltip on touch devices */
+  .floating-action-tooltip {
+    display: none;
+  }
+}

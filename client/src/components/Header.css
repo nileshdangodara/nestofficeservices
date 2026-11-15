@@ -1,0 +1,340 @@
+/* ============================================================
+   Morph Nav — ReactVibe Floating Pill Navigation Bar
+   ============================================================ */
+
+.morph-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 18px 20px 10px;
+  pointer-events: none;
+  transition: padding 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.morph-nav--scrolled {
+  padding: 12px 20px 8px;
+}
+
+.morph-nav__shell {
+  max-width: 1080px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.morph-nav--scrolled .morph-nav__shell {
+  max-width: 920px;
+}
+
+/* Main Floating Pill Container */
+.morph-nav__pill {
+  pointer-events: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 12px 10px 28px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 228, 231, 0.85);
+  border-radius: 9999px;
+  box-shadow:
+    0 12px 36px -6px rgba(15, 23, 42, 0.08),
+    0 4px 12px -2px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition:
+    padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.morph-nav--scrolled .morph-nav__pill {
+  padding: 8px 10px 8px 24px;
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(212, 212, 216, 0.9);
+  box-shadow:
+    0 18px 42px -8px rgba(15, 23, 42, 0.11),
+    0 6px 16px -3px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Brand Logo (Brand Mark + Typographic Name) */
+.morph-nav__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #18181b;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity 0.18s ease;
+}
+
+.morph-nav__logo:hover {
+  opacity: 0.85;
+}
+
+.morph-nav__logo-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.morph-nav__logo-title {
+  line-height: 1;
+}
+
+/* Center Navigation Links */
+.morph-nav__nav {
+  margin-inline: auto;
+}
+
+.morph-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.morph-nav__link {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #52525b;
+  padding: 7px 13px;
+  border-radius: 9999px;
+  transition: color 0.18s ease, background-color 0.18s ease;
+  white-space: nowrap;
+}
+
+.morph-nav__link:hover {
+  color: #09090b;
+  background-color: rgba(244, 244, 245, 0.85);
+}
+
+.morph-nav__link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+/* Right Action Button: Soft Iridescent Rainbow Border Pill (like "Schedule Demo" in reference) */
+.morph-nav__actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@property --morph-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes morphRainbowSpin {
+  to {
+    --morph-angle: 360deg;
+  }
+}
+
+.morph-nav__cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5px;
+  border-radius: 9999px;
+  background: conic-gradient(
+    from var(--morph-angle),
+    #93c5fd,
+    #f9a8d4,
+    #fde047,
+    #86efac,
+    #c4b5fd,
+    #fda4af,
+    #93c5fd
+  );
+  animation: morphRainbowSpin 6s linear infinite;
+  box-shadow:
+    0 4px 14px -2px rgba(232, 81, 34, 0.14),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.morph-nav__cta:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 20px -3px rgba(232, 81, 34, 0.22),
+    0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.morph-nav__cta:active {
+  transform: scale(0.98);
+}
+
+.morph-nav__cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-blue);
+}
+
+.morph-nav__cta-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    180deg,
+    #f5ebe6 0%,
+    #fdf8f6 55%,
+    #ffffff 100%
+  );
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #27272a;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.morph-nav__cta:hover .morph-nav__cta-inner {
+  background: linear-gradient(
+    180deg,
+    #f0e2dc 0%,
+    #fbf4f1 60%,
+    #ffffff 100%
+  );
+  color: #09090b;
+}
+
+.morph-nav__cta--full {
+  width: 100%;
+}
+
+.morph-nav__cta--full .morph-nav__cta-inner {
+  width: 100%;
+}
+
+/* Mobile Hamburger */
+.morph-nav__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 38px;
+  height: 38px;
+  padding: 6px;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.morph-nav__hamburger:hover {
+  background-color: var(--bg-muted);
+}
+
+.morph-nav__hamburger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background-color: var(--text-primary);
+  transition: transform 0.22s ease, opacity 0.22s ease;
+  transform-origin: center;
+}
+
+.morph-nav__hamburger--open span:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
+}
+.morph-nav__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+.morph-nav__hamburger--open span:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+}
+
+/* Mobile Floating Drawer */
+.morph-nav__mobile-drawer {
+  pointer-events: auto;
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 228, 231, 0.9);
+  border-radius: 24px;
+  padding: 16px 20px 20px;
+  box-shadow: 0 18px 40px -8px rgba(15, 23, 42, 0.12);
+}
+
+.morph-nav__mobile-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.morph-nav__mobile-link {
+  display: block;
+  padding: 11px 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: color 0.15s ease;
+}
+
+.morph-nav__mobile-link:hover {
+  color: var(--accent-blue);
+}
+
+.morph-nav__mobile-cta-wrap {
+  margin-top: 18px;
+  padding-top: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.morph-nav__mobile-cta-wrap .morph-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+}
+
+.morph-nav__mobile-cta-wrap .morph-nav__cta-inner {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 32px;
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .morph-nav__nav,
+  .morph-nav__actions {
+    display: none;
+  }
+  .morph-nav__hamburger {
+    display: flex;
+  }
+  .morph-nav__mobile-drawer--open {
+    display: block;
+  }
+  .morph-nav__pill {
+    padding: 8px 12px 8px 22px;
+  }
+}

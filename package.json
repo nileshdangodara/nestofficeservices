@@ -1,0 +1,16 @@
+{
+  "name": "nestofficeservices",
+  "version": "1.0.0",
+  "description": "NestOffice Services — MERN corporate maintenance website",
+  "private": true,
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "start:server": "npm start --prefix server"
+  },
+  "dependencies": {
+    "page-mascot": "^0.1.0"
+  }
+}

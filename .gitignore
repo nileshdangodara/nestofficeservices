@@ -1,0 +1,11 @@
+node_modules/
+.env
+dist/
+*.log
+
+.vscode/
+.DS_Store
+.vercel/
+client/build/
+client/dist/
+server/.env

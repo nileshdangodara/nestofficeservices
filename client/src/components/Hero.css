@@ -1,0 +1,575 @@
+/* ============================================================
+   Hero Section — 3-Column Architectural Bento Showcase
+   Adapted with NestOffice palette (#E85122, #09090b, #fafafa)
+   ============================================================ */
+
+.hero-section {
+  position: relative;
+  background-color: #ffffff;
+  padding-top: clamp(20px, 3vw, 36px);
+  padding-bottom: clamp(48px, 6vw, 76px);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.hero-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr 1.08fr;
+  gap: clamp(20px, 2.5vw, 30px);
+  align-items: stretch;
+}
+
+/* ============================================================
+   Column 1: Left Copy, Connected Pill CTA, Rating & Meta Cards
+   ============================================================ */
+.hero-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: 6px;
+  gap: 28px;
+}
+
+.hero-copy-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-main-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(36px, 4.2vw, 52px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 38ch;
+  margin-bottom: 28px;
+}
+
+/* Connected Figure-8 Pill CTA ("Explore Residences ↗" style in #E85122) */
+
+
+.hero-connected-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: var(--radius-full);
+  background-color: rgba(232, 81, 34, 0.14);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+.hero-connected-btn:hover {
+  background-color: rgba(232, 81, 34, 0.22);
+  transform: translateY(-1px);
+}
+
+.hero-connected-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232, 81, 34, 0.3);
+}
+
+.hero-connected-btn__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding-inline: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-blue);
+  /* #E85122 */
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: background-color 0.2s ease;
+}
+
+.hero-connected-btn__bridge {
+  width: 10px;
+  height: 18px;
+  margin-inline: -3px;
+  background-color: var(--accent-blue);
+  transition: background-color 0.2s ease;
+}
+
+.hero-connected-btn__circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-connected-btn:hover .hero-connected-btn__pill,
+.hero-connected-btn:hover .hero-connected-btn__bridge,
+.hero-connected-btn:hover .hero-connected-btn__circle {
+  background-color: var(--accent-blue-hover);
+}
+
+.hero-connected-btn:hover .hero-connected-btn__circle {
+  transform: translate(1px, -1px);
+}
+
+/* Star Rating Row */
+.hero-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+}
+
+.hero-stars {
+  display: inline-flex;
+  gap: 3px;
+  color: #f59e0b;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.hero-rating-score {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hero-rating-label {
+  color: var(--text-tertiary);
+}
+
+/* Bottom 2 Meta Cards */
+.hero-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 100%;
+}
+
+.hero-meta-card {
+  background-color: #fff6f3;
+  border: 1px solid #fbe4dc;
+  border-radius: 20px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 112px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-meta-card:hover {
+  border-color: var(--accent-blue-border);
+  transform: translateY(-2px);
+}
+
+.hero-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #ffffff;
+  border-radius: var(--radius-full);
+  padding: 4px 12px 4px 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.hero-meta-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  /* #E85122 */
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-meta-tag-text {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.hero-meta-value {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-top: 14px;
+}
+
+/* ============================================================
+   Column 2: Center Tall Portrait Architectural Image
+   ============================================================ */
+.hero-col-center {
+  display: flex;
+}
+
+.hero-portrait-card {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-muted);
+  box-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.1);
+}
+
+.hero-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-portrait-card:hover .hero-portrait-img {
+  transform: scale(1.03);
+}
+
+/* ============================================================
+   Column 3: Right Bento Container
+   ============================================================ */
+.hero-col-right {
+  background-color: var(--bg-secondary);
+  /* #fafafa */
+  border: 1px solid var(--border-hairline);
+  border-radius: 28px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-bento-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hero-bento-title {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero-bento-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.hero-bento-arrow:hover {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+  transform: translate(1px, -1px);
+}
+
+/* Bento Image Cards */
+.hero-bento-media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--bg-muted);
+}
+
+.hero-bento-media--large {
+  flex: 1.25;
+  min-height: 230px;
+}
+
+.hero-bento-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  flex: 1;
+}
+
+.hero-bento-media--small {
+  min-height: 165px;
+}
+
+.hero-bento-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-bento-media:hover img {
+  transform: scale(1.05);
+}
+
+.hero-bento-media:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-blue);
+}
+
+.hero-bento-badge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   Tablet & Mobile Hero Carousel Styles
+   Replaces center portrait and bento grid to minimize vertical height
+   ============================================================ */
+.hero-mobile-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-carousel-viewport {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--bg-muted);
+  box-shadow: 0 8px 24px -6px rgba(15, 23, 42, 0.08);
+}
+
+.hero-carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  transform: scale(0.98);
+}
+
+.hero-carousel-slide--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.hero-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(9, 9, 11, 0.05) 0%,
+      rgba(9, 9, 11, 0.25) 45%,
+      rgba(9, 9, 11, 0.82) 100%);
+  pointer-events: none;
+}
+
+.hero-carousel-caption {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  z-index: 2;
+}
+
+.hero-carousel-badge {
+  background-color: var(--accent-blue, #E85122);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-carousel-title {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* Carousel Controls (Arrows + Dots) */
+.hero-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 4px;
+}
+
+.hero-carousel-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-carousel-arrow:hover {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+.hero-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #d4d4d8;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-carousel-dot--active {
+  width: 22px;
+  background-color: var(--accent-blue, #E85122);
+}
+
+/* ============================================================
+   Responsive Breakpoints
+   ============================================================ */
+@media (max-width: 1040px) {
+
+  /* Hide the 4 stacked desktop images (center portrait + bento grid) */
+  .hero-col-center,
+  .hero-col-right {
+    display: none !important;
+  }
+
+  /* Hide star rating row and meta info cards on tablet & mobile */
+  .hero-rating-row,
+  .hero-meta-grid {
+    display: none !important;
+  }
+
+  .hero-cta-row {
+    margin-bottom: 0;
+  }
+
+  .hero-col-left {
+    gap: 0;
+    justify-content: center;
+  }
+
+  /* Display the space-saving interactive carousel */
+  .hero-mobile-carousel {
+    display: flex;
+  }
+
+  .hero-showcase-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .hero-carousel-viewport {
+    height: 360px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .hero-description {
+    margin-bottom: 22px;
+  }
+
+  .hero-carousel-viewport {
+    height: 240px;
+    border-radius: 20px;
+  }
+
+  .hero-carousel-caption {
+    left: 12px;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .hero-carousel-title {
+    font-size: 14.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-carousel-viewport {
+    height: 215px;
+    border-radius: 18px;
+  }
+}

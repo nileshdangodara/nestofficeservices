@@ -1,0 +1,411 @@
+/* ============================================================
+   How It Works Section — Smooth Interactive Showcase
+   Desktop: Smooth flex-grow + opacity/height transitions on hover
+   Tablet/Phone: All images and all descriptions visible without hover
+   ============================================================ */
+
+.hiw-section {
+  background-color: #ffffff;
+  padding-block: var(--section-gap);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+/* ============================================================
+   Centered Section Header with Top-Left Corner Bracket Eyebrow
+   ============================================================ */
+.hiw-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.hiw-eyebrow-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px 4px;
+  margin-bottom: 12px;
+}
+
+.hiw-eyebrow-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68%;
+  height: 14px;
+  border-top: 1.5px solid var(--accent-blue);
+  border-left: 1.5px solid var(--accent-blue);
+  border-top-left-radius: 3px;
+  pointer-events: none;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hiw-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.hiw-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.hiw-subtitle {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 64ch;
+}
+
+/* ============================================================
+   Interactive Cards Row (Smooth Flex Expansion on Desktop)
+   Supports 5 Cards with smooth proportional expansion
+   ============================================================ */
+.hiw-showcase-grid {
+  display: flex;
+  gap: clamp(10px, 1.3vw, 18px);
+  align-items: center;
+  min-height: 440px;
+}
+
+/* Individual Step Card Base */
+.hiw-step-card {
+  flex: 1 1 0%;
+  min-width: 0;
+  background-color: #f8f8f9;
+  border: 1px solid rgba(228, 228, 231, 0.75);
+  border-radius: 20px;
+  padding: 14px 14px 22px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.hiw-step-card:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-blue);
+}
+
+/* ============================================================
+   Top Zone: Image Always Visible on Every Card
+   ============================================================ */
+.hiw-step-card__top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Image Container */
+.hiw-step-card__media {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: var(--bg-muted);
+}
+
+.hiw-step-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hiw-step-card__img-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 248, 249, 0) 45%,
+    rgba(248, 248, 249, 0.96) 100%
+  );
+  pointer-events: none;
+}
+
+/* Step Number Pill Badge on Top of Image */
+.hiw-step-card__step-badge {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(9, 9, 11, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 3px 9px;
+  border-radius: 9999px;
+  z-index: 2;
+}
+
+/* ============================================================
+   Bottom Zone: Icon, Title & Description
+   ============================================================ */
+.hiw-step-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+/* Small Rounded Square Icon Badge */
+.hiw-step-card__icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid rgba(228, 228, 231, 0.85);
+  color: var(--accent-blue); /* #E85122 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.03);
+  flex-shrink: 0;
+}
+
+.hiw-step-card__title {
+  font-family: var(--font-sans);
+  font-size: clamp(14.5px, 1.1vw, 17px);
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hiw-step-card__desc-inner {
+  overflow: hidden;
+}
+
+.hiw-step-card__desc {
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   Desktop View (> 980px): Interactive Hover & Expansion ONLY
+   ============================================================ */
+@media (min-width: 981px) {
+  .hiw-step-card {
+    cursor: pointer;
+    will-change: flex-grow, min-height, padding;
+    transition:
+      flex 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      min-height 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      padding 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hiw-step-card:hover {
+    border-color: rgba(228, 228, 231, 0.95);
+  }
+
+  .hiw-step-card--active {
+    flex: 1.6 1 0%;
+    background-color: #ffffff;
+    border-color: rgba(232, 81, 34, 0.28);
+    padding: 14px 14px 26px;
+    min-height: 430px;
+    box-shadow: 0 18px 42px -12px rgba(15, 23, 42, 0.08);
+  }
+
+  .hiw-step-card__media {
+    transition: height 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hiw-step-card--active .hiw-step-card__media {
+    height: 190px;
+  }
+
+  /* Desktop Grayscale: Inactive is grayed out */
+  .hiw-step-card__img {
+    filter: grayscale(100%);
+    opacity: 0.72;
+    transition:
+      filter 0.4s ease,
+      opacity 0.4s ease,
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Desktop Hover/Active: Takes full color */
+  .hiw-step-card--active .hiw-step-card__img,
+  .hiw-step-card:hover .hiw-step-card__img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .hiw-step-card--active:hover .hiw-step-card__img {
+    transform: scale(1.04);
+  }
+
+  .hiw-step-card__step-badge {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .hiw-step-card--active .hiw-step-card__step-badge,
+  .hiw-step-card:hover .hiw-step-card__step-badge {
+    background: rgba(232, 81, 34, 0.88);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .hiw-step-card__body {
+    transition: padding 0.45s cubic-bezier(0.22, 1, 0.36, 1), margin-top 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hiw-step-card--active .hiw-step-card__body {
+    padding-inline: 10px;
+    margin-top: 16px;
+  }
+
+  .hiw-step-card__title {
+    transition: font-size 0.35s ease;
+  }
+
+  .hiw-step-card--active .hiw-step-card__title {
+    font-size: clamp(16px, 1.25vw, 18.5px);
+  }
+
+  .hiw-step-card__desc-wrap {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+      grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      margin-top 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    margin-top: 0;
+  }
+
+  .hiw-step-card--active .hiw-step-card__desc-wrap {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    margin-top: 10px;
+  }
+}
+
+/* ============================================================
+   Tablet & Phone View (<= 980px):
+   NO HOVER EFFECTS — All cards are static, full color, fully readable
+   ============================================================ */
+@media (max-width: 980px) {
+  .hiw-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    min-height: auto;
+  }
+
+  /* All cards are identical, clean, static cards without hover states */
+  .hiw-step-card,
+  .hiw-step-card--active,
+  .hiw-step-card:hover,
+  .hiw-step-card--active:hover {
+    flex: none;
+    padding: 14px 14px 24px;
+    min-height: auto;
+    cursor: default !important;
+    background-color: #f8f8f9 !important;
+    border: 1px solid rgba(228, 228, 231, 0.75) !important;
+    box-shadow: 0 6px 20px -8px rgba(15, 23, 42, 0.05) !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Center the 5th card across 2 columns on tablet */
+  .hiw-step-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+    max-width: 580px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .hiw-step-card__media,
+  .hiw-step-card--active .hiw-step-card__media {
+    height: 185px;
+    opacity: 1;
+    transform: none !important;
+  }
+
+  /* Zero hover/grayscale on tablet & mobile — always in full original color */
+  .hiw-step-card__img,
+  .hiw-step-card--active .hiw-step-card__img,
+  .hiw-step-card:hover .hiw-step-card__img,
+  .hiw-step-card--active:hover .hiw-step-card__img {
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Standard neutral step badges on tablet/mobile without hover shifts */
+  .hiw-step-card__step-badge,
+  .hiw-step-card--active .hiw-step-card__step-badge,
+  .hiw-step-card:hover .hiw-step-card__step-badge,
+  .hiw-step-card--active:hover .hiw-step-card__step-badge {
+    background: rgba(9, 9, 11, 0.7) !important;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    transition: none !important;
+  }
+
+  .hiw-step-card__body,
+  .hiw-step-card--active .hiw-step-card__body {
+    padding-inline: 10px;
+    margin-top: 16px;
+  }
+
+  .hiw-step-card__title,
+  .hiw-step-card--active .hiw-step-card__title {
+    font-size: 18px;
+  }
+
+  /* All descriptions statically visible without hover */
+  .hiw-step-card__desc-wrap,
+  .hiw-step-card--active .hiw-step-card__desc-wrap {
+    display: block !important;
+    grid-template-rows: none !important;
+    opacity: 1 !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hiw-showcase-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .hiw-step-card:last-child:nth-child(odd) {
+    grid-column: span 1;
+    max-width: none;
+  }
+
+  .hiw-step-card__media,
+  .hiw-step-card--active .hiw-step-card__media {
+    height: 195px;
+  }
+}

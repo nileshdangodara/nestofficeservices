@@ -1,0 +1,660 @@
+/* ============================================================
+   Services Section — React Bits Pro "Modal Cards"
+   Interactive cards that morph into an expanded detail modal
+   Styled with NestOffice palette (#E85122, #09090b, #fafafa)
+   ============================================================ */
+
+.services-section {
+  background-color: #ffffff;
+  padding-block: var(--section-gap);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.services-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: clamp(28px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+
+.services-title {
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.services-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.services-carousel-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.services-carousel-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.services-carousel-btn:hover:not(:disabled) {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.services-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.services-carousel-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-blue);
+}
+
+.services-header-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s ease;
+}
+
+.services-header-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Modal Cards Horizontal Carousel
+   ============================================================ */
+.services-carousel-viewport {
+  position: relative;
+  width: 100%;
+}
+
+.services-carousel-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 6px 4px 18px;
+  margin-inline: -4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.services-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.services-carousel-track:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-blue);
+  border-radius: 26px;
+}
+
+.modal-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 300px;
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  border: 1px solid var(--border-hairline);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0 4px 18px -4px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* Carousel Dots & Counter Footer */
+.services-carousel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.services-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.services-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #d4d4d8;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+}
+
+.services-carousel-dot:hover {
+  background-color: #a1a1aa;
+}
+
+.services-carousel-dot--active {
+  width: 28px;
+  background-color: var(--accent-blue); /* #E85122 */
+}
+
+.services-carousel-dot:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+.services-carousel-counter {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.modal-card:hover {
+  border-color: var(--accent-blue-border);
+  box-shadow: 0 14px 32px -8px rgba(232, 81, 34, 0.12), 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.modal-card:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-blue);
+}
+
+/* Card Top Image Container */
+.modal-card__media {
+  position: relative;
+  height: 210px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-muted);
+}
+
+.modal-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-card:hover .modal-card__img {
+  transform: scale(1.05);
+}
+
+.modal-card__media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 11, 0.22) 0%,
+    rgba(9, 9, 11, 0) 45%,
+    rgba(9, 9, 11, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.modal-card__num-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(9, 9, 11, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 11px;
+  border-radius: 9999px;
+}
+
+.modal-card__num-pill--lg {
+  top: 20px;
+  left: 22px;
+  font-size: 13px;
+  padding: 5px 14px;
+}
+
+.modal-card__expand-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-card:hover .modal-card__expand-btn {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+/* Card Body */
+.modal-card__body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modal-card__tag-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.modal-card__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: var(--accent-blue-light);
+  border: 1px solid var(--accent-blue-border);
+  color: var(--accent-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-card__tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+}
+
+.modal-card__title {
+  font-family: var(--font-sans);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.modal-card__excerpt {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.modal-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-hairline);
+  margin-top: auto;
+}
+
+.modal-card__feature-chip {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 190px;
+}
+
+.modal-card__action-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  white-space: nowrap;
+  transition: transform 0.15s ease;
+}
+
+.modal-card:hover .modal-card__action-text {
+  transform: translateX(2px);
+}
+
+/* ============================================================
+   Expanded Modal Overlay & Stage
+   ============================================================ */
+.modal-card-portal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-card-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 9, 11, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-card-stage {
+  position: relative;
+  z-index: 201;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.modal-card-stage::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-card-expanded {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid var(--border-hairline);
+  border-radius: 28px;
+  box-shadow:
+    0 28px 70px -12px rgba(9, 9, 11, 0.32),
+    0 8px 24px -4px rgba(9, 9, 11, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-card-expanded__scroll {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-card-expanded__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-card-expanded__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 20;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(228, 228, 231, 0.8);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.modal-card-expanded__close:hover {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+.modal-card-expanded__media {
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 32vw, 300px);
+  overflow: hidden;
+  background-color: var(--bg-muted);
+  flex-shrink: 0;
+}
+
+.modal-card-expanded__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-card-expanded__media-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 11, 0.28) 0%,
+    rgba(9, 9, 11, 0) 50%,
+    rgba(9, 9, 11, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+.modal-card-expanded__body {
+  padding: clamp(24px, 4vw, 34px);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-card-expanded__title {
+  font-family: var(--font-sans);
+  font-size: clamp(24px, 3.2vw, 30px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.modal-card-expanded__desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+}
+
+/* Included Features Box inside Modal */
+.modal-card-expanded__features-box {
+  background-color: #fff6f3;
+  border: 1px solid #fbe4dc;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 26px;
+}
+
+.modal-card-expanded__features-label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-blue);
+  margin-bottom: 12px;
+}
+
+.modal-card-expanded__features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px 16px;
+}
+
+.modal-card-expanded__feature-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.modal-card-expanded__check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Modal Footer Actions with Connected Figure-8 Pill CTA */
+.modal-card-expanded__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 6px;
+}
+
+.modal-card-expanded__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: var(--radius-full);
+  background-color: rgba(232, 81, 34, 0.14);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+.modal-card-expanded__cta:hover {
+  background-color: rgba(232, 81, 34, 0.22);
+  transform: translateY(-1px);
+}
+
+.modal-card-expanded__cta-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding-inline: 22px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.modal-card-expanded__cta-bridge {
+  width: 10px;
+  height: 16px;
+  margin-inline: -3px;
+  background-color: var(--accent-blue);
+  transition: background-color 0.2s ease;
+}
+
+.modal-card-expanded__cta-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  font-size: 15px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-card-expanded__cta:hover .modal-card-expanded__cta-pill,
+.modal-card-expanded__cta:hover .modal-card-expanded__cta-bridge,
+.modal-card-expanded__cta:hover .modal-card-expanded__cta-circle {
+  background-color: var(--accent-blue-hover);
+}
+
+.modal-card-expanded__cta:hover .modal-card-expanded__cta-circle {
+  transform: translate(1px, -1px);
+}
+
+/* ============================================================
+   Responsive Breakpoints
+   ============================================================ */
+@media (max-width: 980px) {
+  .modal-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-card {
+    flex: 0 0 88%;
+    min-width: 260px;
+  }
+
+  .services-header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .modal-card-expanded__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-card-expanded__cta {
+    justify-content: center;
+  }
+}
