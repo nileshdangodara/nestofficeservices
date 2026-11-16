@@ -81,16 +81,12 @@ export default function Hero() {
         <div className="hero-col-left">
           <div className="hero-copy-block">
             <h1 className="hero-main-heading">
-              Your One-Stop
-              <br />
-              Office Solution
-              <br />
-              Search to Move-In
+              Complete Office Space Solution
             </h1>
 
             <p className="hero-description">
               From scouting prime commercial locations to bespoke turnkey interior fit-outs,
-              MEP, smart IT setups, seamless relocation, and ongoing facility management —
+              smart IT setups, seamless relocation, and ongoing facility management —
               we handle the entire journey so you can simply step in and call it your own.
             </p>
 

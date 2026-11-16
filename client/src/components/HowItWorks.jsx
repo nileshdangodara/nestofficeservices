@@ -57,7 +57,7 @@ const STEPS = [
   },
   {
     step: "05",
-    title: "Completion & Review",
+    title: "Completion & Handover",
     desc: "Work sign-off is verified on-site with your facility manager, backed by ongoing quality audits and feedback.",
     image:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
