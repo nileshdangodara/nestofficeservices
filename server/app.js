@@ -18,8 +18,10 @@ app.use(helmet());
 
 // CORS
 const allowedOrigins = [
-  process.env.CLIENT_URL || "http://localhost:5173",
   "http://localhost:5173",
+  "https://nestofficeservices.vercel.app",
+  "https://nestofficeservices.com",
+  "https://www.nestofficeservices.com",
 ];
 app.use(
   cors({

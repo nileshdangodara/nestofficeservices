@@ -27,8 +27,8 @@ const HERO_SLIDES = [
     image:
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80",
     badge: "Move-In & Care",
-    title: "Turnkey Ready Handover",
-    alt: "Move-in ready turnkey workplace and facility management",
+    title: "Customise Ready Handover",
+    alt: "Move-in ready Customise workplace and facility management",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function Hero() {
             </h1>
 
             <p className="hero-description">
-              From scouting prime commercial locations to bespoke turnkey interior fit-outs,
+              From scouting prime commercial locations to bespoke customise interior fit-outs,
               smart IT setups, seamless relocation, and ongoing facility management —
               we handle the entire journey so you can simply step in and call it your own.
             </p>
@@ -130,7 +130,7 @@ export default function Hero() {
                 </span>
                 <span className="hero-meta-tag-text">Delivery Model</span>
               </div>
-              <div className="hero-meta-value">100% Turnkey Handover</div>
+              <div className="hero-meta-value">100% Customised Handover</div>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Hero() {
               type="button"
               className="hero-bento-arrow"
               onClick={() => handleScrollTo("#services")}
-              aria-label="Explore all turnkey services"
+              aria-label="Explore all services"
             >
               ↗
             </button>
@@ -214,7 +214,7 @@ export default function Hero() {
             >
               <img
                 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80"
-                alt="Move-in ready turnkey workplace and facility management"
+                alt="Move-in ready Customise workplace and facility management"
                 loading="eager"
               />
               <span className="hero-bento-badge">Move-In &amp; Care</span>

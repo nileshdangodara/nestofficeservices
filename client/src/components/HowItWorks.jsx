@@ -94,7 +94,7 @@ export default function HowItWorks() {
           </h2>
 
           <p className="hiw-subtitle">
-            Our end-to-end process guides you from commercial property discovery and turnkey interior fit-outs to moving in and calling your workspace your own.
+            Our end-to-end process guides you from commercial property discovery and Customise interior fit-outs to moving in and calling your workspace your own.
           </p>
         </div>
 

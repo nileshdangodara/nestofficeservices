@@ -63,7 +63,7 @@ export default function About() {
             <p className="about-paragraph">
               Setting up a corporate workplace shouldn't mean juggling real estate brokers,
               interior designers, and moving teams. NestOffice provides a
-              unified, turnkey ecosystem: we locate prime commercial properties, deliver
+              unified,Customise ecosystem: we locate prime commercial properties, deliver
               bespoke architectural fit-outs, IT systems, manage physical
               move-ins, and provide 24/7 facility care. You step into a ready-to-run office
               you are proud to call your own.

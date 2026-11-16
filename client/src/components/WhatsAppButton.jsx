@@ -2,11 +2,11 @@ import "./WhatsAppButton.css";
 
 export default function WhatsAppButton() {
   // Primary office contact: Mumbai facility desk (+91 98920 25125)
-  const rawPhone = "919892025125";
-  const displayPhone = "+91 98920 25125";
+  const rawPhone = "919326654908";
+  const displayPhone = "+91 9326654908";
   const callUrl = `tel:+${rawPhone}`;
   const whatsappMsg = encodeURIComponent(
-    "Hello NestOffice Services, I would like to inquire about your turnkey office solutions (Search to Move-In & Care)."
+    "Hello NestOffice Services, I would like to inquire about your services."
   );
   const whatsappUrl = `https://wa.me/${rawPhone}?text=${whatsappMsg}`;
 

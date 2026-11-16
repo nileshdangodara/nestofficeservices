@@ -18,7 +18,7 @@ export const SERVICES = [
     id: "interior-fitout",
     num: "02",
     tag: "ARCHITECTURE & DESIGN",
-    name: "Turnkey Interior Fit-Outs",
+    name: "Customised Interior Fit-Outs",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80",
     description:
