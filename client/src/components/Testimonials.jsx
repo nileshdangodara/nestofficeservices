@@ -43,51 +43,29 @@ const ALL_TESTIMONIALS = [
     badge: "Interior Architecture",
     rating: 5,
     quote:
-      "Our workspace feels completely transformed. NestOffice Service managed to balance aesthetics, functionality and our brand identity really well.",
+      "Our workspace feels completely transformed. NestOffice Services managed to balance aesthetics, functionality and our brand identity really well.",
   },
   {
     id: "t5",
-    name: "Kunal Verma",
+    name: "Siddharth Patel",
     role: "Founder & CEO",
     company: "Velocity Ventures, Lower Parel",
-    avatar: "KV",
+    avatar: "SP",
     badge: "Commercial Leasing",
     rating: 5,
     quote:
-      "Finding commercial space in Mumbai with clear zoning and favorable lease terms used to be a nightmare. NestOffice's property discovery team closed our lease in under 3 weeks.",
+      "From planning to execution, the entire interior process was handled professionally. The attention to detail really made a difference to the final space.",
   },
   {
     id: "t6",
-    name: "Sneha Kulkarni",
+    name: "Rahul Mehta",
     role: "Director of Infrastructure",
     company: "CloudScale Systems, Navi Mumbai",
-    avatar: "SK",
+    avatar: "RM",
     badge: "MEP, HVAC & IT Setup",
     rating: 5,
     quote:
-      "Their engineering team handled our entire server room setup, structured cabling, biometric security, and precision air-conditioning with zero hiccups on day one.",
-  },
-  {
-    id: "t7",
-    name: "Rajesh Nair",
-    role: "Head of Administration",
-    company: "Sterling Logistics, Nariman Point",
-    avatar: "RN",
-    badge: "Zero-Downtime Move-In",
-    rating: 5,
-    quote:
-      "Relocating 200 workstations and fragile server racks without disrupting our operational hours felt impossible until NestOffice took charge. Completely stress-free handover.",
-  },
-  {
-    id: "t8",
-    name: "Ananya Sen",
-    role: "Facility Operations Lead",
-    company: "BluePeak Capital, Worli",
-    avatar: "AS",
-    badge: "24/7 Facility Care",
-    rating: 5,
-    quote:
-      "The ongoing facility care is world-class. From preventative electrical maintenance to daily corporate housekeeping and HVAC servicing, everything is handled proactively.",
+      "NestOffice Services made the entire property search process incredibly smooth. They understood exactly what we were looking for and helped us find the right space without wasting time.",
   },
 ];
 
