@@ -16,7 +16,6 @@ const COMPANY_LOGOS = [
   { name: "Company 8", src: "/logos/client_8.webp" },
   { name: "Company 9", src: "/logos/client_9.webp" },
   { name: "Company 10", src: "/logos/client_10.webp" },
-  { name: "Company 11", src: "/logos/client_11.webp" },
   { name: "Company 12", src: "/logos/client_12.webp" },
   { name: "Company 13", src: "/logos/client_13.webp" },
   { name: "Company 14", src: "/logos/client_14.webp" },
@@ -77,7 +76,7 @@ export default function About() {
               className="about-connected-btn"
               onClick={() => handleScrollTo("#services")}
             >
-              <span className="about-connected-btn__pill">Explore Turnkey Solutions</span>
+              <span className="about-connected-btn__pill">Explore Services</span>
               <span className="about-connected-btn__bridge" aria-hidden="true" />
               <span className="about-connected-btn__circle" aria-hidden="true">
                 ↗
