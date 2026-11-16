@@ -3,47 +3,47 @@ import "./Testimonials.css";
 const ALL_TESTIMONIALS = [
   {
     id: "t1",
-    name: "Aarav Mehta",
+    name: "Surabaya",
     role: "Head of Workplace & Real Estate",
     company: "FinTech Scale-up, Bandra",
-    avatar: "AM",
+    avatar: "SU",
     badge: "Full Turnkey Setup",
     rating: 5,
     quote:
-      "NestOffice scouted our commercial space in Mumbai, executed the complete 120-seat turnkey interior fit-out in 45 days, and handled our entire relocation over a single weekend with zero downtime.",
+      "We were looking for the right office location and NestOffice Services made the search much more efficient. They understood our budget, requirements and timeline perfectly.",
   },
   {
     id: "t2",
-    name: "Pooja Singhania",
+    name: "Ankit Jain",
     role: "Chief Operating Officer",
     company: "Digital Media Group, Andheri",
-    avatar: "PS",
+    avatar: "AJ",
     badge: "Search to Move-In",
     rating: 5,
     quote:
-      "Instead of coordinating with 6 separate vendors for leasing, civil carpentry, MEP, HVAC, and housekeeping, NestOffice gave us a true one-stop solution. Moving into our new headquarters was completely seamless.",
+      "What stood out was their understanding of the market and our specific requirments. NestOffice Services made finding the right property much easier than we expeted.",
   },
   {
     id: "t3",
-    name: "Vikram Malhotra",
+    name: "Ayesha Mehta",
     role: "Managing Director",
     company: "Global Advisory Partners, BKC",
     avatar: "VM",
     badge: "Turnkey & Facility Care",
     rating: 5,
     quote:
-      "From the day we finalized our office address to move-in day, NestOffice made the space feel truly our own. Their integrated facility management now keeps our workplace running like clockwork.",
+      "From property options to negotiations, the team handled everything with great attention to detail. we found a space that works perfecty for our business.",
   },
   {
     id: "t4",
-    name: "Rhea Deshmukh",
+    name: "Pooja Agarwal",
     role: "VP People & Culture",
     company: "Apex Tech Labs, Powai",
-    avatar: "RD",
+    avatar: "PA",
     badge: "Interior Architecture",
     rating: 5,
     quote:
-      "The ergonomic workstations, acoustic booths, and executive boardrooms created an environment our teams genuinely love coming to every day. Exceptional workmanship and design sense.",
+      "Our workspace feels completely transformed. NestOffice Service managed to balance aesthetics, functionality and our brand identity really well.",
   },
   {
     id: "t5",
