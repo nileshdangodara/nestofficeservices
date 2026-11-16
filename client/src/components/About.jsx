@@ -40,7 +40,7 @@ export default function About() {
           <div className="about-media-card">
             <img
               src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
-              alt="Inspiring turnkey corporate office interior built and managed by NestOffice"
+              alt="corporate office interior built and managed by NestOffice"
               className="about-media-img"
               width="760"
               height="480"
@@ -62,9 +62,9 @@ export default function About() {
 
             <p className="about-paragraph">
               Setting up a corporate workplace shouldn't mean juggling real estate brokers,
-              interior designers, MEP contractors, and moving teams. NestOffice provides a
+              interior designers, and moving teams. NestOffice provides a
               unified, turnkey ecosystem: we locate prime commercial properties, deliver
-              bespoke architectural fit-outs, engineer MEP &amp; IT systems, manage physical
+              bespoke architectural fit-outs, IT systems, manage physical
               move-ins, and provide 24/7 facility care. You step into a ready-to-run office
               you are proud to call your own.
             </p>
