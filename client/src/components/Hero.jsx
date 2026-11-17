@@ -19,9 +19,9 @@ const HERO_SLIDES = [
   {
     image:
       "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
-    badge: "MEP & HVAC Setup",
+    badge: "HVAC Setup",
     title: "Smart Facility Infrastructure",
-    alt: "MEP, central HVAC and smart workplace infrastructure setup",
+    alt: "central HVAC and smart workplace infrastructure setup",
   },
   {
     image:
@@ -197,10 +197,10 @@ export default function Hero() {
             >
               <img
                 src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
-                alt="MEP, central HVAC and smart workplace infrastructure setup"
+                alt=" central HVAC and smart workplace infrastructure setup"
                 loading="eager"
               />
-              <span className="hero-bento-badge">MEP &amp; HVAC Setup</span>
+              <span className="hero-bento-badge">HVAC Setup</span>
             </div>
 
             <div
