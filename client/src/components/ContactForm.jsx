@@ -154,8 +154,8 @@ export default function ContactForm() {
           <div className="contact-channels">
             <div className="contact-channel-item">
               <span className="contact-channel-label">Email</span>
-              <a href="mailto:business@example.com" className="contact-channel-val">
-                business@example.com
+              <a href="mailto:support@nestofficeservices.com" className="contact-channel-val">
+                support@nestofficeservices.com
               </a>
             </div>
             <div className="contact-channel-item">

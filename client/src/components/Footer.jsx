@@ -48,7 +48,7 @@ export default function Footer() {
               {/* Circular Contact / Quick Action Icons */}
               <div className="footer-card__socials" aria-label="Direct contact channels">
                 <a
-                  href="mailto:business@example.com"
+                  href="mailto:support@nestofficeservices.com"
                   className="footer-card__social-btn"
                   aria-label="Email NestOffice Services"
                   title="Email Us"
