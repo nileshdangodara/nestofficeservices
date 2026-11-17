@@ -261,13 +261,13 @@ export default function Services() {
         <div className="services-header-row">
           <div>
             <div className="section-eyebrow-wrap">
-              <span className="section-eyebrow">Turnkey Solutions</span>
+              <span className="section-eyebrow">Customize Solutions</span>
             </div>
             <h2 id="services-title" className="type-headline services-title">
               End-to-End Workspace Solutions
             </h2>
             <p className="type-body section-sub">
-              From discovering prime office locations to bespoke fit-outs, corporate move-in, and ongoing facility management — explore our complete turnkey services.
+              From discovering prime office locations to bespoke fit-outs, corporate move-in, and ongoing facility management — explore our complete Customise services.
             </p>
           </div>
 
@@ -415,9 +415,8 @@ export default function Services() {
                   role="tab"
                   aria-selected={currentIdx === idx}
                   aria-label={`Slide ${idx + 1}: ${svc.name}`}
-                  className={`services-carousel-dot ${
-                    currentIdx === idx ? "services-carousel-dot--active" : ""
-                  }`}
+                  className={`services-carousel-dot ${currentIdx === idx ? "services-carousel-dot--active" : ""
+                    }`}
                   onClick={() => scrollToSlide(idx)}
                 />
               ))}
