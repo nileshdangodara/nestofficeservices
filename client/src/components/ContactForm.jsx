@@ -38,7 +38,7 @@ function validate(fields) {
   if (!fields.service) errs.service = "Please select a service.";
 
   if (!fields.message.trim()) errs.message = "Message is required.";
-  else if (fields.message.trim().length < 10) errs.message = "Message must be at least 10 characters.";
+  else if (fields.message.trim().length < 4) errs.message = "Message must be at least 10 characters.";
   else if (fields.message.trim().length > 2000) errs.message = "Message must not exceed 2000 characters.";
 
   return errs;
