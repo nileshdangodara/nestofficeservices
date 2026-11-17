@@ -55,9 +55,7 @@ export default function About() {
             <span className="about-badge-pill">About NestOffice</span>
 
             <h2 id="about-title" className="about-heading">
-              One Stop Solution.
-              <br />
-              From Finding It to Calling It Yours.
+              Complete Office Space Solution
             </h2>
 
             <p className="about-paragraph">

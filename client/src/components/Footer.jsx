@@ -59,7 +59,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919326654908"
                   className="footer-card__social-btn"
                   aria-label="Call NestOffice Services"
                   title="Call Us"
@@ -136,8 +136,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+919892025125" className="footer-card__link">
-                    +91 98920 25125
+                  <a href="tel:+919326654908" className="footer-card__link">
+                    +91 93266 54908
                   </a>
                 </li>
                 <li>

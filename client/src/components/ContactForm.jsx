@@ -160,8 +160,8 @@ export default function ContactForm() {
             </div>
             <div className="contact-channel-item">
               <span className="contact-channel-label">Phone</span>
-              <a href="tel:+919876543210" className="contact-channel-val">
-                +91 98765 43210
+              <a href="tel:+9193266 54908" className="contact-channel-val">
+                +91 93266 54908
               </a>
             </div>
             <div className="contact-channel-item">
@@ -278,7 +278,7 @@ export default function ContactForm() {
                 className={`form-input ${errors.phone ? "form-input--error" : ""}`}
                 value={form.phone}
                 onChange={set("phone")}
-                placeholder="+91 98765 43210"
+                placeholder="+91 93266 54908"
                 aria-invalid={Boolean(errors.phone)}
                 aria-describedby={errors.phone ? "err-phone" : undefined}
                 disabled={status === "loading"}

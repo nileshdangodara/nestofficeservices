@@ -45,7 +45,7 @@ const STEPS = [
   {
     step: "04",
     title: "Scheduled Execution",
-    desc: "Our certified technicians execute HVAC, MEP, cleaning, or carpentry work smoothly around your operational hours.",
+    desc: "Our certified technicians execute HVAC, cleaning, or carpentry work smoothly around your operational hours.",
     image:
       "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
     icon: (
