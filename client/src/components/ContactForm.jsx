@@ -160,7 +160,7 @@ export default function ContactForm() {
             </div>
             <div className="contact-channel-item">
               <span className="contact-channel-label">Phone</span>
-              <a href="tel:+9193266 54908" className="contact-channel-val">
+              <a href="tel:+919326654908" className="contact-channel-val">
                 +91 93266 54908
               </a>
             </div>

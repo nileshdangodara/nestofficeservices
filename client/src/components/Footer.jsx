@@ -131,8 +131,8 @@ export default function Footer() {
               <h3 className="footer-card__heading">Contact</h3>
               <ul className="footer-card__list">
                 <li>
-                  <a href="mailto:business@example.com" className="footer-card__link">
-                    business@example.com
+                  <a href="mailto:support@nestofficeservices.com" className="footer-card__link">
+                    support@nestofficeservices.com
                   </a>
                 </li>
                 <li>
