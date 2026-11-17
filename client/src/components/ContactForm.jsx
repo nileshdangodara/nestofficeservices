@@ -1,18 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { submitEnquiry } from "../services/contactApi.js";
 import "./ContactForm.css";
+import { SERVICES } from "./servicesData.js";
 
 const SERVICE_OPTIONS = [
   { value: "", label: "Select a service category…" },
-  { value: "office-search", label: "Office Search & Leasing" },
-  { value: "interior-fitout", label: "Turnkey Interior Fit-Outs" },
-  { value: "civil-interior", label: "Civil & Interior Maintenance" },
-  { value: "electrical", label: "Electrical & Power Infrastructure" },
-  { value: "hvac", label: "Heating, Ventilation & Air Conditioning (HVAC)" },
-  { value: "plumbing", label: "Plumbing & Water Management" },
-  { value: "it-networking", label: "IT & Networking Maintenance" },
-  { value: "office-furniture", label: "Office Furniture & Workstations" },
-  { value: "hygiene", label: "Pest Control & Facility Hygiene" },
+  ...SERVICES.map(s => ({ value: s.id, label: s.name })),
   { value: "other", label: "Other Services (Custom / Not Listed Above)" },
 ];
 
