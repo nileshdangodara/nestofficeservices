@@ -90,7 +90,7 @@ export default function HowItWorks() {
           </div>
 
           <h2 id="hiw-title" className="hiw-heading">
-            From Location Search to Move-In — Simplified
+            From Location Search to Move-In - Simplified
           </h2>
 
           <p className="hiw-subtitle">
