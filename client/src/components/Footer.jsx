@@ -33,8 +33,8 @@ export default function Footer() {
                   src="/logo-white.webp"
                   alt="NestOffice Services"
                   className="footer-card__logo-img"
-                  width="35"
-                  height="28"
+                  width="350"
+                  height="300"
                 />
                 <span className="footer-card__logo-text"></span>
               </a>
