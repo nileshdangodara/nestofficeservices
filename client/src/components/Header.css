@@ -85,8 +85,8 @@
 }
 
 .morph-nav__logo-img {
-  width: 26px;
-  height: 26px;
+  width: 200px;
+  height: 55px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;

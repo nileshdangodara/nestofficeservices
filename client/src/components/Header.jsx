@@ -49,13 +49,13 @@ export default function Header() {
             aria-label="NestOffice — Home"
           >
             <img
-              src="/logo.webp"
+              src="/logo.png"
               alt="NestOffice"
               className="morph-nav__logo-img"
               width="28"
               height="28"
             />
-            <span className="morph-nav__logo-title">Nest Office Services</span>
+            <span className="morph-nav__logo-title"></span>
           </a>
 
           {/* Center Navigation Links */}
