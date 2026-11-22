@@ -261,7 +261,7 @@ export default function Services() {
         <div className="services-header-row">
           <div>
             <div className="section-eyebrow-wrap">
-              <span className="section-eyebrow">Customize Solutions</span>
+              <span className="section-eyebrow">Customise Solutions</span>
             </div>
             <h2 id="services-title" className="type-headline services-title">
               End-to-End Workspace Solutions

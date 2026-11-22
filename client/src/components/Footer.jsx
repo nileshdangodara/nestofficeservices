@@ -31,12 +31,12 @@ export default function Footer() {
               >
                 <img
                   src="/logo-white.webp"
-                  alt="NestOffice"
+                  alt="NestOffice Services"
                   className="footer-card__logo-img"
                   width="28"
                   height="28"
                 />
-                <span className="footer-card__logo-text">NestOffice</span>
+                <span className="footer-card__logo-text">NestOffice Services</span>
               </a>
 
               <p className="footer-card__desc">

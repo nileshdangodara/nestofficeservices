@@ -52,7 +52,7 @@ export default function About() {
         {/* ── Right Column: Soft Rounded Content Card ── */}
         <div className="about-col-right">
           <div className="about-content-top">
-            <span className="about-badge-pill">About NestOffice</span>
+            <span className="about-badge-pill">About NestOffice Services</span>
 
             <h2 id="about-title" className="about-heading">
               Complete Office Space Solution

@@ -140,7 +140,7 @@ export default function ContactForm() {
             Request a callback or quotation
           </h2>
           <p className="type-body contact-desc">
-            Share your contact details and maintenance requirements using the form. Our team will
+            Share your contact details and maintenance requirements. Our team will
             review your request and get in touch to discuss scope and scheduling.
           </p>
 
