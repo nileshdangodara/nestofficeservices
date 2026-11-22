@@ -18,7 +18,7 @@ const HERO_SLIDES = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
+      "https://plus.unsplash.com/premium_photo-1682145344450-34d8323dec84?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D?auto=format&fit=crop&w=600&q=80",
     badge: "HVAC Setup",
     title: "Smart Facility Infrastructure",
     alt: "central HVAC and smart workplace infrastructure setup",
@@ -26,7 +26,7 @@ const HERO_SLIDES = [
   {
     image:
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80",
-    badge: "Move-In & Care",
+    badge: "Customised Interior Fit-Outs",
     title: "Customise Ready Handover",
     alt: "Move-in ready Customise workplace and facility management",
   },
