@@ -51,7 +51,7 @@ export const SERVICES = [
     tag: "ELECTRICAL & POWER",
     name: "Electrical & Power Infrastructure",
     image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     description:
       "Ensuring safe, reliable, and uninterrupted power distribution through efficient electrical installations, system upgrades, and preventive maintenance.",
     features: [
@@ -67,7 +67,7 @@ export const SERVICES = [
     tag: "CLIMATE CONTROL & HVAC",
     name: "Heating, Ventilation & Air Conditioning (HVAC)",
     image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=80",
+      "https://plus.unsplash.com/premium_photo-1682145344450-34d8323dec84?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     description:
       "Delivering reliable indoor comfort and improved air quality through comprehensive air conditioning, advanced cooling systems, efficient ventilation, and professional climate control maintenance tailored to modern workplace environments.",
     features: [
