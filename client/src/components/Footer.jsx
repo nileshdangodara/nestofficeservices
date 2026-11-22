@@ -30,10 +30,10 @@ export default function Footer() {
                 aria-label="NestOffice — Home"
               >
                 <img
-                  src="/logo-white.webp"
+                  src="/logo-white.png"
                   alt="NestOffice Services"
                   className="footer-card__logo-img"
-                  width="350"
+                  width="400"
                   height="300"
                 />
                 <span className="footer-card__logo-text"></span>

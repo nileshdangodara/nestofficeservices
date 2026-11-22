@@ -11,7 +11,8 @@
 
 .footer-card {
   width: 100%;
-  background-color: var(--dark-bg); /* #09090b */
+  background-color: var(--dark-bg);
+  /* #09090b */
   color: var(--dark-text);
   border-top: 1px solid var(--dark-border);
   /* Extra top padding to accommodate the overlapping white CTA card */
@@ -42,7 +43,8 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background-color: var(--accent-blue); /* #E85122 */
+  background-color: var(--accent-blue);
+  /* #E85122 */
   color: #ffffff;
   display: inline-flex;
   align-items: center;
@@ -51,11 +53,12 @@
 }
 
 .footer-card__logo-img {
-  width: 28px;
-  height: 28px;
+  width: 250px;
+  height: 75px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
+  margin-bottom: 12px;
 }
 
 .footer-card__desc {

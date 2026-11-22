@@ -55,7 +55,7 @@ export default function Header() {
               width="28"
               height="28"
             />
-            <span className="morph-nav__logo-title">NestOffice Services</span>
+            <span className="morph-nav__logo-title">Nest Office Services</span>
           </a>
 
           {/* Center Navigation Links */}

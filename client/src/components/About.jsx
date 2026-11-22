@@ -52,7 +52,7 @@ export default function About() {
         {/* ── Right Column: Soft Rounded Content Card ── */}
         <div className="about-col-right">
           <div className="about-content-top">
-            <span className="about-badge-pill">About NestOffice Services</span>
+            <span className="about-badge-pill">About Nest Office Services</span>
 
             <h2 id="about-title" className="about-heading">
               Complete Office Space Solution
@@ -60,7 +60,7 @@ export default function About() {
 
             <p className="about-paragraph">
               Setting up a corporate workplace shouldn't mean juggling real estate brokers,
-              interior designers, and moving teams. NestOffice provides a
+              interior designers, and moving teams. Nest Office Services provides a
               unified,Customise ecosystem: we locate prime commercial properties, deliver
               bespoke architectural fit-outs, IT systems, manage physical
               move-ins, and provide 24/7 facility care. You step into a ready-to-run office
